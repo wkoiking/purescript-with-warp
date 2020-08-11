@@ -1,0 +1,113 @@
+cabal-version: 1.12
+
+name:           purescript-with-warp
+version:        0.1.0.0
+description:    Sample program for PureScript with Haskell warp server backend
+homepage:       
+bug-reports:    
+author:         wkoiking
+maintainer:     example@example.com
+copyright:      2018 wkoiking
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Lib
+      Type
+      Css
+      Html
+      IdClass
+  other-modules:
+      Paths_purescript_with_warp
+  hs-source-dirs:
+      src
+  default-extensions:
+      StrictData
+    , TupleSections
+    , LambdaCase
+    , MultiWayIf
+    , RecordWildCards
+    , DerivingStrategies
+    , DeriveGeneric
+    , DeriveAnyClass
+    , GeneralizedNewtypeDeriving
+    , BinaryLiterals
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+    , data-default-class
+    , purescript-bridge
+    , http-types
+    , text
+    , wai
+    , aeson
+    , argonaut
+    , bytestring
+    , casing
+    , clay
+    , lucid
+  default-language: Haskell2010
+
+executable purescript-with-warp-exe
+  main-is: Main.hs
+  other-modules:
+      DevelMain
+      Paths_purescript_with_warp
+  hs-source-dirs:
+      app
+  default-extensions:
+      StrictData
+    , TupleSections
+    , LambdaCase
+    , MultiWayIf
+    , RecordWildCards
+    , DerivingStrategies
+    , DeriveGeneric
+    , DeriveAnyClass
+    , GeneralizedNewtypeDeriving
+    , BinaryLiterals
+  ghc-options: -threaded -Wall 
+  build-depends:
+      base >=4.7 && <5
+    , purescript-with-warp
+    , warp
+    , wai
+    , wai-extra
+    , http-types
+    , process
+    , foreign-store
+    , purescript-bridge
+    , aeson
+    , argonaut
+    , bytestring
+  default-language: Haskell2010
+
+test-suite purescript-with-warp-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  default-extensions:
+      StrictData
+    , TupleSections
+    , LambdaCase
+    , MultiWayIf
+    , RecordWildCards
+    , DerivingStrategies
+    , DeriveGeneric
+    , DeriveAnyClass
+    , GeneralizedNewtypeDeriving
+    , BinaryLiterals
+  ghc-options: -threaded -Wall 
+  build-depends:
+      base >=4.7 && <5
+    , argonaut
+    , bytestring
+    , aeson
+    , purescript-bridge
+    , purescript-with-warp
+  default-language: Haskell2010

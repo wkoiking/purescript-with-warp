@@ -1,0 +1,11 @@
+/.stack-work/
+/argonaut/.stack-work/
+/purescript-src/.psci_modules/
+/purescript-src/.spago/
+/purescript-src/output/
+/purescript-src/node_modules/
+/purescript-src/index.js
+/purescript-src/main.js
+
+index.html
+ToDo.md

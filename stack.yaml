@@ -1,0 +1,13 @@
+
+resolver: nightly-2020-08-10
+
+packages:
+- argonaut
+- .
+
+extra-deps: []
+# - argonaut
+
+
+# Allow a newer minor version of GHC than the snapshot specifies
+# compiler-check: newer-minor
