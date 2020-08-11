@@ -1,6 +1,6 @@
 Sample program for PureScript with Haskell warp server.
 
-[elminator](https://hackage.haskell.org/package/purescript-bridge) package is used for automatic generation of PureScript types/encoder/decode from Haskell types.
+[purescript-bridge](https://hackage.haskell.org/package/purescript-bridge) package is used for automatic generation of PureScript types/encoder/decode from Haskell types.
 
 # How to build and run
 
